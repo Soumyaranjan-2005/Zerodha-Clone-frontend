@@ -36,7 +36,7 @@ function Login() {
             }
 
             // Update this URL to the port where your dashboard app runs.
-            window.location.href = 'https://zerodha-clone-dashboard-two.vercel.app';
+            window.location.href = 'https://srm-zerodha-dashboard.vercel.app';
         } catch (error) {
             alert(error.message);
         }
