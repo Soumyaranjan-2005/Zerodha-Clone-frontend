@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
-
 import { Link } from "react-router-dom";
+import { FRONTEND_BASE_URL, FRONTEND_LOGIN_PATH } from "../config";
 
 const Menu = () => {
   const [selectedMenu, setSelectedMenu] = useState(0);
@@ -18,7 +18,17 @@ const Menu = () => {
   const handleLogout = () => {
     localStorage.clear();
     sessionStorage.clear();
-    window.location.href = "https://srm-zerodha-dashboard.vercel.app";
+
+    let loginUrl = FRONTEND_LOGIN_PATH;
+    if (FRONTEND_BASE_URL && FRONTEND_BASE_URL.trim() !== '') {
+      const baseUrl = FRONTEND_BASE_URL.replace(/\/+$/, '');
+      const loginPath = FRONTEND_LOGIN_PATH.startsWith('/')
+        ? FRONTEND_LOGIN_PATH
+        : `/${FRONTEND_LOGIN_PATH}`;
+      loginUrl = `${baseUrl}${loginPath}`;
+    }
+
+    window.location.href = loginUrl;
   };
 
   useEffect(() => {
