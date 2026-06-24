@@ -1,18 +1,38 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 import { Link } from "react-router-dom";
 
 const Menu = () => {
   const [selectedMenu, setSelectedMenu] = useState(0);
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
+  const profileRef = useRef(null);
 
   const handleMenuClick = (index) => {
     setSelectedMenu(index);
   };
 
   const handleProfileClick = () => {
-    setIsProfileDropdownOpen(!isProfileDropdownOpen);
+    setIsProfileDropdownOpen((prev) => !prev);
   };
+
+  const handleLogout = () => {
+    localStorage.clear();
+    sessionStorage.clear();
+    window.location.href = "https://srm-zerodha-dashboard.vercel.app";
+  };
+
+  useEffect(() => {
+    if (!isProfileDropdownOpen) return;
+
+    const handleOutsideClick = (event) => {
+      if (profileRef.current && !profileRef.current.contains(event.target)) {
+        setIsProfileDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => document.removeEventListener("mousedown", handleOutsideClick);
+  }, [isProfileDropdownOpen]);
 
   const menuClass = "menu";
   const activeMenuClass = "menu selected";
@@ -90,9 +110,34 @@ const Menu = () => {
           </li>
         </ul>
         <hr />
-        <div className="profile" onClick={handleProfileClick}>
-          <div className="avatar">ZU</div>
-          <p className="username">USERID</p>
+        <div className="profile-wrapper" ref={profileRef}>
+          <button
+            type="button"
+            className="profile"
+            onClick={handleProfileClick}
+            aria-expanded={isProfileDropdownOpen}
+          >
+            <div className="avatar">ZU</div>
+            <p className="username">USERID</p>
+          </button>
+          {isProfileDropdownOpen && (
+            <div className="profile-dropdown">
+              <div className="profile-dropdown-header">
+                <div className="avatar avatar-sm">ZU</div>
+                <div>
+                  <p className="profile-name">USERID</p>
+                  <p className="profile-label">Signed in</p>
+                </div>
+              </div>
+              <button
+                type="button"
+                className="logout-button"
+                onClick={handleLogout}
+              >
+                Sign out
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>

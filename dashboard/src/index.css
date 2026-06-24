@@ -259,6 +259,107 @@ code {
   justify-content: space-between;
 }
 
+.profile-wrapper {
+  position: relative;
+}
+
+.profile {
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  cursor: pointer;
+  border-radius: 999px;
+  transition: background 0.2s ease;
+  color: #333;
+}
+
+.profile:hover,
+.profile:focus-visible {
+  background: rgba(65, 132, 243, 0.1);
+  outline: none;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #4174f3;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.avatar-sm {
+  width: 32px;
+  height: 32px;
+  font-size: 0.85rem;
+}
+
+.username {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.profile-dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.5rem);
+  min-width: 220px;
+  background: #fff;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  padding: 1rem;
+  z-index: 20;
+  border: 1px solid rgba(114, 114, 114, 0.08);
+}
+
+.profile-dropdown-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.profile-name {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.profile-label {
+  margin: 0;
+  font-size: 0.78rem;
+  color: #7d7d7d;
+}
+
+.logout-button {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  background: #f5f7ff;
+  color: #1f3a8a;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.logout-button:hover {
+  background: #e8efff;
+  transform: translateY(-1px);
+}
+
+.logout-button:active {
+  transform: translateY(0);
+}
+
 .logo {
   width: 30px;
   height: 20px;
