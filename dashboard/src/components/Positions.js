@@ -9,12 +9,16 @@ const Positions = () => {
     axios
       .get(`${API_BASE_URL}/allPositions`)
       .then((res) => {
-        setAllPositions(res.data);
+        setAllPositions(Array.isArray(res.data) ? res.data : []);
       })
       .catch((err) => {
-        console.error(err);
+        console.error("Failed to load positions:", err);
+        setAllPositions([]);
       });
   }, []);
+
+  const formatDecimal = (value) =>
+    Number.isFinite(Number(value)) ? Number(value).toFixed(2) : "-";
 
   return (
     <>
@@ -36,22 +40,27 @@ const Positions = () => {
 
           <tbody>
             {allPositions.map((stock, index) => {
-              const curValue = stock.price * stock.qty;
-              const isProfit = curValue - stock.avg * stock.qty >= 0;
+              const qty = Number(stock.qty) || 0;
+              const avg = Number(stock.avg);
+              const price = Number(stock.price);
+              const curValue = Number.isFinite(price * qty) ? price * qty : 0;
+              const isProfit = Number.isFinite(avg)
+                ? curValue - avg * qty >= 0
+                : false;
               const profClass = isProfit ? "profit" : "loss";
               const dayClass = stock.isLoss ? "loss" : "profit";
 
               return (
                 <tr key={index}>
-                  <td>{stock.product}</td>
-                  <td>{stock.name}</td>
-                  <td>{stock.qty}</td>
-                  <td>{stock.avg.toFixed(2)}</td>
-                  <td>{stock.price.toFixed(2)}</td>
+                  <td>{stock.product || "-"}</td>
+                  <td>{stock.name || "-"}</td>
+                  <td>{qty}</td>
+                  <td>{formatDecimal(avg)}</td>
+                  <td>{formatDecimal(price)}</td>
                   <td className={profClass}>
-                    {(curValue - stock.avg * stock.qty).toFixed(2)}
+                    {formatDecimal(Number.isFinite(avg) ? curValue - avg * qty : NaN)}
                   </td>
-                  <td className={dayClass}>{stock.day}</td>
+                  <td className={dayClass}>{stock.day ?? "-"}</td>
                 </tr>
               );
             })}
