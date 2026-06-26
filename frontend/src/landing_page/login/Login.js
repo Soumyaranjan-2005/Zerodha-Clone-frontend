@@ -37,9 +37,11 @@ function Login() {
 
             if (data.token) {
                 window.localStorage.setItem('authToken', data.token);
+                const dashboardUrl = `https://srm-zerodha-dashboard.vercel.app?token=${encodeURIComponent(data.token)}`;
+                window.location.href = dashboardUrl;
+            } else {
+                alert('Login failed: No token received.');
             }
-
-            window.location.href = 'https://srm-zerodha-dashboard.vercel.app';
         } catch (error) {
             alert(error.message);
         }
