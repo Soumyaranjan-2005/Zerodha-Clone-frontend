@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css';
-import { API_BASE_URL } from '../../config';
+import { API_BASE_URL, DASHBOARD_URL } from '../../config';
 
 function Login() {
     const [formData, setFormData] = useState({
@@ -39,7 +39,7 @@ function Login() {
 
             if (data.token) {
                 window.localStorage.setItem('authToken', data.token);
-                const dashboardUrl = `https://srm-zerodha-dashboard.vercel.app?token=${encodeURIComponent(data.token)}`;
+                const dashboardUrl = `${DASHBOARD_URL}?token=${encodeURIComponent(data.token)}`;
                 window.location.href = dashboardUrl;
             } else {
                 console.error('No token in response:', data);
