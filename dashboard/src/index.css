@@ -461,10 +461,6 @@ hr {
 
 .orders {
   width: 100%;
-  min-height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .no-orders {
@@ -472,6 +468,8 @@ hr {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 450px;
+  width: 100%;
 }
 
 .no-orders .icon {
