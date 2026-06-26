@@ -3,11 +3,19 @@ import React from 'react';
 function Awards() {
   return ( 
     <div className='container mt-5 '>
+<<<<<<< HEAD
         <div className='row align-items-center'>
            <div className='col-12 col-lg-6 p-5'> 
               <img src='/media/images/largestBroker.svg' alt="largestBroker" className='img-fluid'/>
            </div>
             <div className='col-12 col-lg-6 p-5 mt-5'>
+=======
+        <div className='row'>
+           <div className='col-12 col-md-6 p-5'> 
+              <img src='/media/images/largestBroker.svg' alt="largestBroker" className='img-fluid'/>
+           </div>
+            <div className='col-12 col-md-6 p-5 mt-5'>
+>>>>>>> def57996 (Make frontend and dashboard mobile responsive)
               <h1>Largest stock broker in India</h1>
               <p className='mb-5'>2+ million Zerodha clients contibute to over 15%of all volumes in India daily by trading and investing in:</p>
               <div className='row'>

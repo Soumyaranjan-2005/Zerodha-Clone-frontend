@@ -954,6 +954,373 @@ hr {
     height: auto;
     flex-direction: column;
   }
+<<<<<<< HEAD
+=======
+
+  .content {
+    flex-basis: 100%;
+    height: auto;
+    padding: 2% 3%;
+  }
+
+  .menu-container {
+    flex-basis: 100%;
+    padding: 15px 10px;
+    justify-content: space-between;
+  }
+
+  .menus ul {
+    display: flex;
+    gap: 5px;
+  }
+
+  .menus li {
+    margin-right: 15px;
+  }
+
+  .menu {
+    font-size: 0.75rem;
+  }
+
+  .order-table table {
+    font-size: 0.85rem;
+  }
+
+  .order-table th,
+  .order-table td {
+    padding: 8px 5px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .col {
+    flex-basis: 100% !important;
+  }
+
+  hr {
+    height: 0;
+    border: none;
+  }
+
+  .data {
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .data hr {
+    height: 0;
+    border: none;
+  }
+
+  .topbar-container {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+  }
+
+  .indices-container {
+    flex-basis: 100%;
+    border-right: none;
+    border-bottom: 1px solid rgb(224, 224, 224);
+    padding: 10px 15px;
+  }
+
+  .watchlist-container {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    height: auto;
+  }
+
+  .content {
+    padding: 3% 2%;
+  }
+
+  .menu-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menus {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menus ul {
+    flex-wrap: wrap;
+  }
+
+  .menus li {
+    margin-right: 10px;
+    margin-bottom: 5px;
+  }
+
+  .menu {
+    font-size: 0.7rem;
+  }
+
+  .profile {
+    gap: 5px;
+    margin-left: 0;
+  }
+
+  .avatar {
+    width: 28px;
+    height: 28px;
+    font-size: 0.85rem;
+  }
+
+  .username {
+    font-size: 0.8rem;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .order-table table {
+    font-size: 0.75rem;
+  }
+
+  .order-table th {
+    padding: 10px 5px;
+    font-size: 0.7rem;
+  }
+
+  .order-table td {
+    padding: 8px 4px;
+    font-size: 0.75rem;
+  }
+
+  .order-table tr td:last-child {
+    font-size: 0.65rem;
+  }
+
+  .col h5 {
+    font-size: 1.4rem;
+  }
+
+  .col p {
+    font-size: 0.75rem;
+  }
+
+  .btn {
+    padding: 8px 15px;
+    font-size: 0.75rem;
+  }
+
+  .section span p {
+    font-size: 1rem;
+  }
+
+  .data .first h3 {
+    font-size: 2rem;
+  }
+
+  .funds p {
+    font-size: 0.7rem;
+  }
+
+  .index {
+    font-size: 0.7rem;
+  }
+
+  .index-points {
+    font-size: 0.7rem;
+  }
+
+  .item {
+    font-size: 0.75rem;
+  }
+
+  .search {
+    font-size: 0.85rem;
+    padding: 12px 15px;
+  }
+
+  .watchlist-number {
+    padding: 15px 10px;
+  }
+
+  .watchlist-number ul li {
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-container {
+    height: auto;
+  }
+
+  .content {
+    padding: 15px 10px;
+  }
+
+  .menu-container {
+    padding: 10px 8px;
+    gap: 8px;
+  }
+
+  .menus ul {
+    gap: 0;
+    flex-wrap: wrap;
+  }
+
+  .menus li {
+    margin-right: 5px;
+    margin-bottom: 3px;
+  }
+
+  .menu {
+    font-size: 0.65rem;
+  }
+
+  .profile {
+    margin-left: 0;
+    gap: 3px;
+  }
+
+  .avatar {
+    width: 24px;
+    height: 24px;
+    font-size: 0.75rem;
+  }
+
+  .username {
+    font-size: 0.7rem;
+  }
+
+  .profile .avatar {
+    margin-right: 5px;
+  }
+
+  .title {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+
+  .order-table {
+    overflow-x: auto;
+  }
+
+  .order-table table {
+    font-size: 0.65rem;
+    min-width: 600px;
+  }
+
+  .order-table th {
+    padding: 8px 3px;
+    font-size: 0.65rem;
+  }
+
+  .order-table td {
+    padding: 6px 3px;
+    font-size: 0.65rem;
+  }
+
+  .row {
+    gap: 15px;
+  }
+
+  .col h5 {
+    font-size: 1.2rem;
+  }
+
+  .col p {
+    font-size: 0.7rem;
+  }
+
+  .btn {
+    padding: 6px 12px;
+    font-size: 0.7rem;
+    width: 100% !important;
+  }
+
+  .section span p {
+    font-size: 0.95rem;
+  }
+
+  .section-icon {
+    transform: scale(0.6);
+  }
+
+  .data .first h3 {
+    font-size: 1.6rem;
+  }
+
+  .data .first p {
+    font-size: 0.7rem;
+  }
+
+  .index {
+    font-size: 0.65rem;
+    white-space: normal;
+  }
+
+  .index-points {
+    font-size: 0.65rem;
+  }
+
+  .percent {
+    font-size: 0.6rem;
+  }
+
+  .item {
+    font-size: 0.65rem;
+  }
+
+  .search {
+    font-size: 0.8rem;
+    padding: 10px 12px;
+    height: 8%;
+  }
+
+  .watchlist-number {
+    padding: 12px 5px;
+  }
+
+  .watchlist-number ul li {
+    padding: 6px 8px;
+    font-size: 0.65rem;
+  }
+
+  .topbar-container {
+    height: auto;
+  }
+
+  .indices-container {
+    padding: 8px 10px;
+  }
+
+  .nifty,
+  .sensex {
+    gap: 5px;
+  }
+
+  .nifty > *,
+  .sensex > * {
+    margin-right: 4px;
+  }
+
+  .funds {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .funds p {
+    font-size: 0.65rem;
+    margin-right: 0;
+  }
+}
+>>>>>>> def57996 (Make frontend and dashboard mobile responsive)
 
   .content {
     flex-basis: 100%;

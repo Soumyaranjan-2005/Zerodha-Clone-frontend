@@ -39,12 +39,15 @@ code {
   border: none;
 }
 
+<<<<<<< HEAD
 /* Footer links */
 footer a {
   display: block;
   margin-bottom: 8px;
 }
 
+=======
+>>>>>>> def57996 (Make frontend and dashboard mobile responsive)
 /* Mobile Responsiveness */
 @media (max-width: 992px) {
   .nav-link {
@@ -52,7 +55,10 @@ footer a {
   }
 
   #supportWrapper {
+<<<<<<< HEAD
     display: flex;
+=======
+>>>>>>> def57996 (Make frontend and dashboard mobile responsive)
     flex-direction: column;
     margin: 0 20px;
     gap: 20px;
@@ -62,6 +68,7 @@ footer a {
     padding: 15px 25px;
     font-size: 16px;
   }
+<<<<<<< HEAD
 
   .container {
     padding-left: 15px !important;
@@ -101,6 +108,8 @@ footer a {
   footer .row .col {
     margin-bottom: 30px;
   }
+=======
+>>>>>>> def57996 (Make frontend and dashboard mobile responsive)
 }
 
 @media (max-width: 768px) {
@@ -112,6 +121,7 @@ footer a {
   #supportWrapper {
     margin: 0 10px;
   }
+<<<<<<< HEAD
 
   .container {
     padding-left: 10px !important;
@@ -171,3 +181,6 @@ footer a {
     gap: 15px !important;
   }
 }
+=======
+}
+>>>>>>> def57996 (Make frontend and dashboard mobile responsive)

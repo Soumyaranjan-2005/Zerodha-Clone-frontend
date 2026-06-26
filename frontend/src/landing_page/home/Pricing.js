@@ -4,18 +4,27 @@ function Pricing() {
   return (
     <div className="container">
       <div className="row">
+<<<<<<< HEAD
         <div className="col-12 col-lg-4 mb-5">
+=======
+        <div className="col-12 col-md-4">
+>>>>>>> def57996 (Make frontend and dashboard mobile responsive)
           <h1 className="mb-3 fs-2">Unbeatable pricing</h1>
           <p>
             We pioneered the concept of discount broking and price transparency
             in India. Flat fees and no hidden charges.
           </p>
-          <a href="/" style={{ textDecoration: "none" }}>
+          <a href="/" style={{textDecoration: "none"}}>
             See pricing<i class="fa fa-arrow-right-long"></i>
           </a>
         </div>
+<<<<<<< HEAD
         <div className="col-12 col-lg-2"></div>
         <div className="col-12 col-lg-6 mb-5">
+=======
+        <div className="col-12 col-md-2"></div>
+        <div className="col-12 col-md-6 mb-5">
+>>>>>>> def57996 (Make frontend and dashboard mobile responsive)
           <div className="row text-center">
             <div className="col-12 col-md-6 p-3 border">
               <h1 className="mb-3">0</h1>
